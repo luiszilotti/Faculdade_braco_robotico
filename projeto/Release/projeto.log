@@ -1,0 +1,10 @@
+﻿  frmproj.cpp
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(609,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(610,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Gerando Código...
+  projeto.vcxproj -> C:\Users\luis_\source\repos\Faculdade_braco_robotico\Release\projeto.exe
