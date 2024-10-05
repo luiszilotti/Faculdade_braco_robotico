@@ -1,0 +1,4 @@
+C:\BETO_ACADEMICO\2024\2_SEM\(2ª_SM)_ROBOTICA_INDUSTRIAL\projeto_base\projeto\Debug\projeto.vcxproj.AssemblyReference.cache
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\Debug\projeto.vcxproj.AssemblyReference.cache
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\Debug\projeto.frmproj.resources
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\Debug\projeto.vcxproj.GenerateResource.cache

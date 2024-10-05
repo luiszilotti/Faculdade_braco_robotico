@@ -1,0 +1,9 @@
+﻿  frmproj.cpp
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(611,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(612,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+  frmproj.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo
+  projeto.vcxproj -> C:\Users\luis_\source\repos\Faculdade_braco_robotico\Debug\projeto.exe
