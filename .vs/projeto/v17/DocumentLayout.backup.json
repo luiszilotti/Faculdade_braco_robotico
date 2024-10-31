@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|solutionrelative:projeto\\frmproj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|solutionrelative:projeto\\frmproj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|solutionrelative:projeto\\frmproj.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{532D861D-53FB-41C2-B63B-0CF0BB29CD57}|projeto\\projeto.vcxproj|solutionrelative:projeto\\frmproj.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +18,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmproj.h [Design]",
               "DocumentMoniker": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h",
               "RelativeDocumentMoniker": "projeto\\frmproj.h",
-              "ToolTip": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h [Design]",
-              "RelativeToolTip": "projeto\\frmproj.h [Design]",
+              "ToolTip": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h [Design]*",
+              "RelativeToolTip": "projeto\\frmproj.h [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-04T22:13:14.788Z",
+              "WhenOpened": "2024-10-31T11:53:06.209Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmproj.cpp",
-              "DocumentMoniker": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.cpp",
-              "RelativeDocumentMoniker": "projeto\\frmproj.cpp",
-              "ToolTip": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.cpp",
-              "RelativeToolTip": "projeto\\frmproj.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-13T23:15:50.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmproj.h",
               "DocumentMoniker": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h",
               "RelativeDocumentMoniker": "projeto\\frmproj.h",
-              "ToolTip": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h",
-              "RelativeToolTip": "projeto\\frmproj.h",
-              "ViewState": "AgIAAHoCAABAzszMzEwwwDUCAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h*",
+              "RelativeToolTip": "projeto\\frmproj.h*",
+              "ViewState": "AgIAAEoCAAAAAAAAAAByPVECAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-13T23:19:44.704Z",
               "EditorCaption": ""
