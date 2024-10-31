@@ -561,9 +561,6 @@ private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void frmproj_Load(System::Object^ sender, System::EventArgs^ e) {
 
-	x_atual = Int16::Parse(txtX->Text);
-	y_atual = Int16::Parse(txtY->Text);
-
 	Bitmap^ imagem = gcnew Bitmap(pctjanela->Width, pctjanela->Height);
 	Graphics^ g = Graphics::FromImage(imagem);
 	g->Clear(Color::White);
@@ -584,6 +581,7 @@ private: System::Void pctjanela_Click(System::Object^ sender, System::EventArgs^
 	int yp = Int16::Parse(txtY->Text); // Coordenada Y do ponto destino (terminal)
 	int r1 = Int16::Parse(txtBraco1->Text); // Comprimento do braço 1 (primeiro elo)
 	int r2 = Int16::Parse(txtBraco2->Text); // Comprimento do braço 2 (segundo elo)
+	
 	//
 	// Cálculo da distância "r3" entre o pronto pivô e o ponto destino:
 	double r3 = Math::Sqrt((xp - xo) * (xp - xo) + (yp - yo) * (yp - yo));
@@ -593,6 +591,10 @@ private: System::Void pctjanela_Click(System::Object^ sender, System::EventArgs^
 		MessageBox::Show(this, "Inatingível!", "Aviso", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 	}
 	else {
+		//Salvamento das coordenadas do click
+		x_atual = Int16::Parse(txtX->Text);
+		y_atual = Int16::Parse(txtY->Text);
+
 		// Cálculo da distância "a" entre o ponto "o" e o ponto "s" (onde a linha "L" cruza com a
 		// linha que liga os centros das circunferências - linha entre os pontos "o" e "p"):
 		double a = ((r1 * r1) - (r2 * r2) + (r3 * r3)) / (2 * r3);
@@ -666,6 +668,9 @@ private: System::Void btnPlotarEixos_Click(System::Object^ sender, System::Event
 	pctjanela->Image = imagem;
 
 }
+
+//botões de movimento do braço
+
 private: System::Void btnup_Click(System::Object^ sender, System::EventArgs^ e) {
 	txtX->Text = x_atual.ToString();
 	txtY->Text = (y_atual - Int16::Parse(cmbpasso -> Text)).ToString();
@@ -679,14 +684,14 @@ private: System::Void btndown_Click(System::Object^ sender, System::EventArgs^ e
 
 }
 private: System::Void btnright_Click(System::Object^ sender, System::EventArgs^ e) {
-	txtX->Text = y_atual.ToString();
-	txtY->Text = (x_atual + Int16::Parse(cmbpasso->Text)).ToString();
+	txtY->Text = y_atual.ToString();
+	txtX->Text = (x_atual + Int16::Parse(cmbpasso->Text)).ToString();
 	pctjanela_Click(pctjanela, e);
 
 }
 private: System::Void btnleft_Click(System::Object^ sender, System::EventArgs^ e) {
-	txtX->Text = y_atual.ToString();
-	txtY->Text = (x_atual - Int16::Parse(cmbpasso->Text)).ToString();
+	txtY->Text = y_atual.ToString();
+	txtX->Text = (x_atual - Int16::Parse(cmbpasso->Text)).ToString();
 	pctjanela_Click(pctjanela, e);
 
 }
