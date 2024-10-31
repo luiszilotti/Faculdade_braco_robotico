@@ -1,0 +1,33 @@
+﻿  frmproj.cpp
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(662,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(663,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(666,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(667,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(670,17): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(671,17): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(755,11): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(756,11): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(760,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(761,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+  frmproj.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo
+  projeto.vcxproj -> C:\Users\luis_\source\repos\Faculdade_braco_robotico\x64\Debug\projeto.exe
