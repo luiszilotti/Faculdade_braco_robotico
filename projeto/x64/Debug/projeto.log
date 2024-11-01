@@ -1,32 +1,38 @@
 ﻿  frmproj.cpp
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(662,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(725,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(663,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(726,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(666,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(729,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(667,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(730,14): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(670,17): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(733,17): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(671,17): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(734,17): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(755,11): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(819,11): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(756,11): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(820,11): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(760,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(824,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
   (compilando o arquivo fonte 'frmproj.cpp')
   
-C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(761,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(825,10): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(944,42): warning C4244: 'argumento': conversão de 'double' para 'int', possível perda de dados
+  (compilando o arquivo fonte 'frmproj.cpp')
+  
+C:\Users\luis_\source\repos\Faculdade_braco_robotico\projeto\frmproj.h(962,3): warning C4286: 'System::ArgumentOutOfRangeException ^': é capturado por classe base ('System::ArgumentException ^') na linha 959
   (compilando o arquivo fonte 'frmproj.cpp')
   
   frmproj.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo

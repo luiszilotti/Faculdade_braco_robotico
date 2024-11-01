@@ -98,6 +98,13 @@ namespace projeto {
 	private: System::Windows::Forms::Button^ btnBaseLeft;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::TextBox^ txtangbase;
+	private: System::Windows::Forms::Button^ btnconecta;
+	private: System::Windows::Forms::TextBox^ txtTransmite;
+	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::Label^ label20;
+	private: System::IO::Ports::SerialPort^ serialPort01;
+	private: System::Windows::Forms::Button^ btnProcPorta;
+	private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -119,7 +126,7 @@ namespace projeto {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -128,6 +135,7 @@ namespace projeto {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->pctjanela = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -171,6 +179,12 @@ namespace projeto {
 			this->btnBaseLeft = (gcnew System::Windows::Forms::Button());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->txtangbase = (gcnew System::Windows::Forms::TextBox());
+			this->btnconecta = (gcnew System::Windows::Forms::Button());
+			this->txtTransmite = (gcnew System::Windows::Forms::TextBox());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->serialPort01 = (gcnew System::IO::Ports::SerialPort(this->components));
+			this->btnProcPorta = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctjanela))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctsuperior))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -321,7 +335,7 @@ namespace projeto {
 			// 
 			// txtTheta1
 			// 
-			this->txtTheta1->Location = System::Drawing::Point(535, 639);
+			this->txtTheta1->Location = System::Drawing::Point(535, 643);
 			this->txtTheta1->Name = L"txtTheta1";
 			this->txtTheta1->Size = System::Drawing::Size(77, 20);
 			this->txtTheta1->TabIndex = 16;
@@ -504,22 +518,19 @@ namespace projeto {
 			// cmbporta
 			// 
 			this->cmbporta->FormattingEnabled = true;
-			this->cmbporta->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"CMB porta" });
-			this->cmbporta->Location = System::Drawing::Point(1142, 629);
+			this->cmbporta->Location = System::Drawing::Point(1151, 570);
 			this->cmbporta->Name = L"cmbporta";
 			this->cmbporta->Size = System::Drawing::Size(121, 21);
 			this->cmbporta->TabIndex = 36;
-			this->cmbporta->Text = L"CMB PORTA";
 			// 
 			// cmbbaud
 			// 
 			this->cmbbaud->FormattingEnabled = true;
-			this->cmbbaud->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"CMB BAUD" });
-			this->cmbbaud->Location = System::Drawing::Point(1142, 662);
+			this->cmbbaud->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"4800", L"9600", L"19200" });
+			this->cmbbaud->Location = System::Drawing::Point(1151, 603);
 			this->cmbbaud->Name = L"cmbbaud";
 			this->cmbbaud->Size = System::Drawing::Size(121, 21);
 			this->cmbbaud->TabIndex = 37;
-			this->cmbbaud->Text = L"CMB BAUD";
 			// 
 			// pctsuperior
 			// 
@@ -555,6 +566,7 @@ namespace projeto {
 			this->btnBaseRight->TabIndex = 40;
 			this->btnBaseRight->Text = L"RIGHT";
 			this->btnBaseRight->UseVisualStyleBackColor = true;
+			this->btnBaseRight->Click += gcnew System::EventHandler(this, &frmproj::btnBaseRight_Click);
 			// 
 			// btnBaseLeft
 			// 
@@ -564,11 +576,12 @@ namespace projeto {
 			this->btnBaseLeft->TabIndex = 41;
 			this->btnBaseLeft->Text = L"LEFT";
 			this->btnBaseLeft->UseVisualStyleBackColor = true;
+			this->btnBaseLeft->Click += gcnew System::EventHandler(this, &frmproj::btnBaseLeft_Click);
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(1063, 578);
+			this->label18->Location = System::Drawing::Point(649, 578);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(81, 13);
 			this->label18->TabIndex = 42;
@@ -576,16 +589,66 @@ namespace projeto {
 			// 
 			// txtangbase
 			// 
-			this->txtangbase->Location = System::Drawing::Point(1150, 575);
+			this->txtangbase->Location = System::Drawing::Point(736, 575);
 			this->txtangbase->Name = L"txtangbase";
 			this->txtangbase->Size = System::Drawing::Size(100, 20);
 			this->txtangbase->TabIndex = 43;
 			this->txtangbase->Text = L"90";
 			// 
+			// btnconecta
+			// 
+			this->btnconecta->Location = System::Drawing::Point(1197, 641);
+			this->btnconecta->Name = L"btnconecta";
+			this->btnconecta->Size = System::Drawing::Size(75, 23);
+			this->btnconecta->TabIndex = 44;
+			this->btnconecta->Text = L"Conectar";
+			this->btnconecta->UseVisualStyleBackColor = true;
+			this->btnconecta->Click += gcnew System::EventHandler(this, &frmproj::btnconecta_Click);
+			// 
+			// txtTransmite
+			// 
+			this->txtTransmite->Location = System::Drawing::Point(736, 603);
+			this->txtTransmite->Name = L"txtTransmite";
+			this->txtTransmite->Size = System::Drawing::Size(100, 20);
+			this->txtTransmite->TabIndex = 45;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(1090, 573);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(32, 13);
+			this->label19->TabIndex = 46;
+			this->label19->Text = L"Porta";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(1090, 606);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(53, 13);
+			this->label20->TabIndex = 47;
+			this->label20->Text = L"Baud rate";
+			// 
+			// btnProcPorta
+			// 
+			this->btnProcPorta->Location = System::Drawing::Point(1093, 641);
+			this->btnProcPorta->Name = L"btnProcPorta";
+			this->btnProcPorta->Size = System::Drawing::Size(89, 23);
+			this->btnProcPorta->TabIndex = 48;
+			this->btnProcPorta->Text = L"Procurar Porta";
+			this->btnProcPorta->UseVisualStyleBackColor = true;
+			this->btnProcPorta->Click += gcnew System::EventHandler(this, &frmproj::btnProcPorta_Click);
+			// 
 			// frmproj
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Inherit;
 			this->ClientSize = System::Drawing::Size(1284, 731);
+			this->Controls->Add(this->btnProcPorta);
+			this->Controls->Add(this->label20);
+			this->Controls->Add(this->label19);
+			this->Controls->Add(this->txtTransmite);
+			this->Controls->Add(this->btnconecta);
 			this->Controls->Add(this->txtangbase);
 			this->Controls->Add(this->label18);
 			this->Controls->Add(this->btnBaseLeft);
@@ -699,12 +762,12 @@ namespace projeto {
 			ag0 = ag0->Substring(ag0->Length - 3, 3);
 			ag1 = ag1->Substring(ag1->Length - 3, 3);
 			ag2 = ag2->Substring(ag2->Length - 3, 3);
-			/*txtTransmite->Text = ag0 + "/" + ag1 + "/" + ag2;
+			txtTransmite->Text = ag0 + "/" + ag1 + "/" + ag2;
 			if (btnconecta->Text == "Desconectar") {
-				serialPort01->WriteLine(txtTansmite->Text + "\r\n");
+				serialPort01->WriteLine(txtTransmite->Text + "\r\n");
 				System::Threading::Thread::Sleep(100);
 			
-			}*/
+			}
 		}
 
 #pragma endregion
@@ -721,6 +784,7 @@ private: System::Void frmproj_Load(System::Object^ sender, System::EventArgs^ e)
 	g->DrawLine(gcnew Pen(Color::LightGray, 1.0f), (float)(origemX), (float)(0), (float)(origemX),
 		(float)(pctjanela->Height)); // eixo y
 	pctjanela->Image = imagem;
+	cmbporta->Items->AddRange(System::IO::Ports::SerialPort::GetPortNames());
 	pctjanela_Click(pctjanela, e);
 
 }
@@ -746,8 +810,8 @@ private: System::Void pctjanela_Click(System::Object^ sender, System::EventArgs^
 		// linha que liga os centros das circunferências - linha entre os pontos "o" e "p"):
 		double a = ((r1 * r1) - (r2 * r2) + (r3 * r3)) / (2 * r3);
 	
-			// Cálculo das coordenadas do ponto "s" (xs,ys):
-			double xs = xo + a * ((xp - xo) / r3);
+		// Cálculo das coordenadas do ponto "s" (xs,ys):
+		double xs = xo + a * ((xp - xo) / r3);
 		double ys = yo + a * ((yp - yo) / r3);
 		// Cálculo da altura do segmento iniciado no ponto "s" e finalizado na intersecção das circunferências:
 		double h = Math::Sqrt((r1 * r1) - (a * a));
@@ -852,6 +916,53 @@ private: System::Void btnleft_Click(System::Object^ sender, System::EventArgs^ e
 	txtX->Text = (x_atual - Int16::Parse(cmbpasso->Text)).ToString();
 	pctjanela_Click(pctjanela, e);
 
+}
+private: System::Void btnProcPorta_Click(System::Object^ sender, System::EventArgs^ e) {
+	cmbporta->Items->AddRange(System::IO::Ports::SerialPort::GetPortNames());
+}
+private: System::Void btnBaseLeft_Click(System::Object^ sender, System::EventArgs^ e) {
+	ang_base = ang_base + Int16::Parse(cmbpasso->Text);
+	if (ang_base > 360)ang_base = ang_base - 360;
+	txtangbase->Text = ang_base.ToString();
+	vista_superior();
+}
+private: System::Void btnBaseRight_Click(System::Object^ sender, System::EventArgs^ e) {
+	ang_base = ang_base - Int16::Parse(cmbpasso->Text);
+	if (ang_base < 0)ang_base = ang_base + 360;
+	txtangbase->Text = ang_base.ToString();
+	vista_superior();
+}
+private: System::Void btnconecta_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (btnconecta->Text == "Desconectar") {
+		serialPort01->Close();
+		btnconecta->Text = "Conectar";
+		btnconecta->BackColor = Color::ForestGreen;
+	}
+	else{
+		try {
+			serialPort01->PortName = cmbporta->Text;
+			serialPort01->BaudRate = Double::Parse(cmbbaud->Text);
+			serialPort01->Open();
+			//serialPort01->Encoding = System::Text::Enconding::GetEncoding(28591);
+			btnconecta->Text = "Desconectar";
+			btnconecta->BackColor = Color::Red;
+		}
+		catch(InvalidOperationException^ e){
+			System::Windows::Forms::MessageBox::Show(e->Message);
+		}
+		catch (UnauthorizedAccessException^ e) {
+			System::Windows::Forms::MessageBox::Show(e->Message);
+		}
+		catch (System::IO::IOException^ e) {
+			System::Windows::Forms::MessageBox::Show(e->Message);
+		}
+		catch (ArgumentException^ e) {
+			System::Windows::Forms::MessageBox::Show(e->Message);
+		}
+		catch (ArgumentOutOfRangeException^ e) {
+			System::Windows::Forms::MessageBox::Show(e->Message);
+		}
+	}
 }
 };
 }

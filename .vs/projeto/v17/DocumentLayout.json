@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,10 +29,6 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "frmproj.h [Design]",
@@ -41,7 +37,7 @@
               "ToolTip": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h [Design]",
               "RelativeToolTip": "projeto\\frmproj.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-31T11:53:06.209Z",
+              "WhenOpened": "2024-11-01T13:09:07.468Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -52,7 +48,7 @@
               "RelativeDocumentMoniker": "projeto\\frmproj.h",
               "ToolTip": "C:\\Users\\luis_\\source\\repos\\Faculdade_braco_robotico\\projeto\\frmproj.h",
               "RelativeToolTip": "projeto\\frmproj.h",
-              "ViewState": "AgIAAHwCAAAAQDMzMzPzv5MCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIMDAADgzMzMzMwQwMMDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-13T23:19:44.704Z",
               "EditorCaption": ""
