@@ -104,6 +104,10 @@ namespace projeto {
 	private: System::Windows::Forms::Label^ label20;
 	private: System::IO::Ports::SerialPort^ serialPort01;
 	private: System::Windows::Forms::Button^ btnProcPorta;
+	private: System::Windows::Forms::Button^ btnnomes;
+	private: System::Windows::Forms::TextBox^ txtnomes;
+	private: System::Windows::Forms::Label^ label21;
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -185,6 +189,9 @@ namespace projeto {
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->serialPort01 = (gcnew System::IO::Ports::SerialPort(this->components));
 			this->btnProcPorta = (gcnew System::Windows::Forms::Button());
+			this->btnnomes = (gcnew System::Windows::Forms::Button());
+			this->txtnomes = (gcnew System::Windows::Forms::TextBox());
+			this->label21 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctjanela))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctsuperior))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -640,10 +647,42 @@ namespace projeto {
 			this->btnProcPorta->UseVisualStyleBackColor = true;
 			this->btnProcPorta->Click += gcnew System::EventHandler(this, &frmproj::btnProcPorta_Click);
 			// 
+			// btnnomes
+			// 
+			this->btnnomes->Location = System::Drawing::Point(1093, 678);
+			this->btnnomes->Name = L"btnnomes";
+			this->btnnomes->Size = System::Drawing::Size(123, 23);
+			this->btnnomes->TabIndex = 49;
+			this->btnnomes->Text = L"Mostrar nomes";
+			this->btnnomes->UseVisualStyleBackColor = true;
+			this->btnnomes->Click += gcnew System::EventHandler(this, &frmproj::btnnomes_Click);
+			// 
+			// txtnomes
+			// 
+			this->txtnomes->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txtnomes->Location = System::Drawing::Point(886, 603);
+			this->txtnomes->Multiline = true;
+			this->txtnomes->Name = L"txtnomes";
+			this->txtnomes->Size = System::Drawing::Size(151, 98);
+			this->txtnomes->TabIndex = 50;
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Location = System::Drawing::Point(886, 584);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(40, 13);
+			this->label21->TabIndex = 51;
+			this->label21->Text = L"Nomes";
+			// 
 			// frmproj
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Inherit;
 			this->ClientSize = System::Drawing::Size(1284, 731);
+			this->Controls->Add(this->label21);
+			this->Controls->Add(this->txtnomes);
+			this->Controls->Add(this->btnnomes);
 			this->Controls->Add(this->btnProcPorta);
 			this->Controls->Add(this->label20);
 			this->Controls->Add(this->label19);
@@ -704,20 +743,21 @@ namespace projeto {
 		int x_atual = 0, y_atual = 0;
 		int xo, yo, xq, yq, xp, yp;
 		int ang_base = 90;
-
+		
 		//
 		// Função para apresentação da vista superior
 		// ------------------------------------------
 		public: void vista_superior() {
-			double x_base = pctsuperior->Width / 2;
-			double y_base = pctsuperior->Height-250;
+			double x_base = pctsuperior->Width - 310;
+			double y_base = pctsuperior->Height - 250;
 			Color cor1 = Color::FromArgb(180, 0, 164, 235);
 			Color cor2 = Color::FromArgb(180, 0, 178, 255);
 			Color cor3 = Color::FromArgb(255, 50, 50, 50);
+			Color cor4 = Color::FromArgb(255, 60, 140, 230);
 			ang_base = Int16::Parse(txtangbase->Text);
 			Bitmap^ imageBitmapS = gcnew Bitmap(pctsuperior->Width, pctsuperior->Height);
 			Graphics^ gS = Graphics::FromImage(imageBitmapS);
-			gS->Clear(Color::FromArgb(255, 255, 255));
+			gS->Clear(Color::FromArgb(255, 200, 150));
 			int cb1 = xq - xo;
 			int cb2 = xp - xq;
 
@@ -735,26 +775,26 @@ namespace projeto {
 
 			//desenho da área de trabalho
 			int r = Int16::Parse(txtBraco1->Text) + Int16::Parse(txtBraco2->Text);
-			gS->FillEllipse(gcnew SolidBrush(Color::LightYellow), (float)(x_base - r), (float)(y_base - r),(float)(r * 2), (float)(r * 2));
+			gS->FillEllipse(gcnew SolidBrush(Color::FromArgb(100,100,180,100)), (float)(x_base - r), (float)(y_base - r),(float)(r * 2), (float)(r * 2));
 
 			//desenho dos eixos X e Y
 			gS->DrawLine(gcnew Pen(Color::LightGray, 1.0f), (float)(0), (float)(y_base), (float)(pctsuperior->Width), (float)(y_base));
 			gS->DrawLine(gcnew Pen(Color::LightGray, 1.0f), (float)(x_base), (float)(0), (float)(x_base), (float)(pctsuperior->Height));
 
 			//desenho dos braços
-			gS->DrawLine(gcnew Pen(cor1, 30.0f), (float)(x_base), (float)(y_base), (float)(xb1), (float)(yb1));
-			gS->DrawLine(gcnew Pen(cor1, 30.0f), (float)(xb1), (float)(yb1), (float)(xb2), (float)(yb2));
+			gS->DrawLine(gcnew Pen(cor1, 20.0f), (float)(x_base), (float)(y_base), (float)(xb1), (float)(yb1));
+			gS->DrawLine(gcnew Pen(cor1, 20.0f), (float)(xb1), (float)(yb1), (float)(xb2), (float)(yb2));
 
 			//desenho das juntas
-			gS->FillEllipse(gcnew SolidBrush(cor2), (float)(x_base - 15), (float)(y_base - 15), 30.0f, 30.0f);
-			gS->FillEllipse(gcnew SolidBrush(cor1), (float)(xb1 - 15), (float)(yb1 - 15), 30.0f, 30.0f);
-			gS->FillEllipse(gcnew SolidBrush(cor1), (float)(xb2 - 15), (float)(yb2 - 15), 30.0f, 30.0f);
-			gS->FillEllipse(gcnew SolidBrush(cor3), (float)(x_base - 12), (float)(y_base - 12), 24.0f, 24.0f);
-			gS->FillEllipse(gcnew SolidBrush(cor3), (float)(xb1 - 12), (float)(yb1 - 12), 24.0f, 24.0f);
-			gS->FillEllipse(gcnew SolidBrush(cor3), (float)(xb2 - 12), (float)(yb2 - 12), 24.0f, 24.0f);
+			gS->FillEllipse(gcnew SolidBrush(cor2), (float)(x_base - 10), (float)(y_base - 10), 20.0f, 20.0f);
+			gS->FillEllipse(gcnew SolidBrush(cor1), (float)(xb1 - 10), (float)(yb1 - 10), 20.0f, 20.0f);
+			gS->FillEllipse(gcnew SolidBrush(cor1), (float)(xb2 - 10), (float)(yb2 - 10), 20.0f, 20.0f);
+			gS->FillEllipse(gcnew SolidBrush(cor3), (float)(x_base - 7), (float)(y_base - 7), 14.0f, 14.0f);
+			gS->FillEllipse(gcnew SolidBrush(cor3), (float)(xb1 - 7), (float)(yb1 - 7), 14.0f, 14.0f);
+			gS->FillEllipse(gcnew SolidBrush(cor4), (float)(xb2 - 7), (float)(yb2 - 7), 14.0f, 14.0f);
 			pctsuperior->Image = imageBitmapS;
 
-			//transmissão dos ãngulos
+			//transmissão dos ângulos
 			
 			String^ ag0 = "000" + txtangbase->Text;
 			String^ ag1 = "000" + txtTheta1->Text;
@@ -964,5 +1004,10 @@ private: System::Void btnconecta_Click(System::Object^ sender, System::EventArgs
 		}
 	}
 }
+
+private: System::Void btnnomes_Click(System::Object^ sender, System::EventArgs^ e) {
+	txtnomes->Text = "Artur Ruan \r\nBruno Bissoni \r\nLuís Zilotti \r\nNicolas Mariano";
+}
+
 };
 }
